@@ -1,100 +1,138 @@
-# Use antd in create-react-app ✨
+## 一、Ant Design简介及使用
+### **背景介绍**
 
-[Create React App](https://facebook.github.io/create-react-app/) + [Ant Design](https://ant.design).
+antd 是基于 Ant Design 设计体系的 React UI 组件库，主要用于研发企业级中后台产品。
 
-## Step by Step Documentation
+### **特性**
 
-- 🇺🇸 English: https://ant.design/docs/react/use-with-create-react-app
-- 🇨🇳 中文：https://ant.design/docs/react/use-with-create-react-app-cn
+🌈 提炼自企业级中后台产品的交互语言和视觉风格。
 
-## Preview
+📦 开箱即用的高质量 React 组件。
 
-```bash
-$ npm install
-$ npm start
-```
+🛡 使用 TypeScript 开发，提供完整的类型定义文件。
 
-or:
+⚙️ 全链路开发和设计工具体系。
 
-```bash
+🌍 数十个国际化语言支持。
+  
+🎨 深入每个细节的主题定制能力。
+
+项目官网：https://ant.design/docs/react/use-with-create-react-app-cn
+
+源项目地址：https://github.com/ant-design/create-react-app-antd
+
+### **最佳实践**
+
+1.1 antd的本地发布
+
+``` bash
 $ yarn
-$ yarn start
+yarn start
 ```
 
-## See more
+1.2 antd的线上网站发布
 
-- [antd](http://github.com/ant-design/ant-design/)
-- [create-react-app](https://github.com/facebookincubator/create-react-app)
-- [craco](https://github.com/gsoft-inc/craco)
-- [craco-less](https://github.com/DocSpring/craco-less)
+见下一章。
 
----
+## 二、将antd项目通过云开发平台，快速发布为网站
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### **背景介绍**
+云开发平台是阿里云面向广大开发者提供的免费云上研发工作平台，可以实现开发的全流程。关于云开发平台的介绍：https://help.aliyun.com/product/161245.html。
 
-## Available Scripts
+### **最佳实践**
 
-In the project directory, you can run:
+**1.创建antd代码项目**
 
-### `npm start`
+直接fork本项目到自己的GitHub账号下。
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**2.打开云开发平台，完成阿里云账号注册登陆，同意云开发平台服务协议** https://workbench.aliyun.com/application
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/sign.png" width="400">
 
-### `npm test`
+**3.创建云开发平台-前端部署应用**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3.1 创建前端应用
 
-### `npm run build`
+依次点击「应用列表」「前端应用」「新建前端应用」按钮。首先绑定GitHub帐号，允许云开发平台构建、发布你的GitHub代码为可访问的网站。
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/create_0.png" width="200">
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/oauth.png" width="200">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+选择第一步中的代码仓库、主干分支等，并点击下一步。主干分支一般指的是代码的master或main等分支。
 
-### `npm run eject`
+<img src="https://readme-img-2.oss-us-west-1.aliyuncs.com/feApp/github/antd/antd1.png" width="300">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+填写基本信息并点击「完成」。稍等片刻创建成功后，将进入到应用部署界面。
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://readme-img-2.oss-us-west-1.aliyuncs.com/feApp/github/antd/antd2.png" width="600">
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3.2 开发部署配置
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+填写日常/线上环境的部署配置
+按照"?"提示，依次填写部署配置信息。其中：
 
-## Learn More
+- 如需使用自定义域名访问，可将自定义域名填入对应位置，并在部署成功后，根据步骤3.4进行域名解析后实现自定义域名访问</br>
+  <img src="https://readme-img-2.oss-us-west-1.aliyuncs.com/feApp/github/antd/antd3.png" width="400">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3.3 进行项目的部署和查看
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+依次点击「部署」「确定」，即可启动日常/线上环境的发布流程。对于每个代码分支，要求先发布日常环境，再发布线上。若不需多套环境，则可以只使用日常环境，或者发布一次日常环境后，仅使用线上环境即可。
 
-### Code Splitting
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/deploy.png" width="300">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+3.3.1 部署完成，查看部署结果
 
-### Analyzing the Bundle Size
+访问**测试域名**或者**自定义域名**，以下以测试域名为例
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<img src="https://readme-img-2.oss-us-west-1.aliyuncs.com/feApp/github/antd/antd4.png" width="650">
 
-### Making a Progressive Web App
+<img src="https://readme-img-2.oss-us-west-1.aliyuncs.com/feApp/github/antd/antd5.png" width="650">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+3.3.2 在部署完成后，部署状态会显示为“已部署”。且部署网站的记录和过程，也会被完整记录下来：
 
-### Advanced Configuration
+<img src="https://readme-img-2.oss-us-west-1.aliyuncs.com/feApp/github/docs/create4.png" width="600">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+3.3.3可点击部署记录的「查看结果」来查看部署到OSS存储中的静态资源。
 
-### Deployment
+<img src="https://readme-img-2.oss-us-west-1.aliyuncs.com/feApp/github/antd/antd6.png" width="400">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/result_download.png" width="350">
 
-### `npm run build` fails to minify
+3.3.4 可点击部署记录的「查看日志」查看部署的详细过程，并在部署发生错误时，精确定位学习错误情况。
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<img src="https://readme-img-2.oss-us-west-1.aliyuncs.com/feApp/github/antd/antd7.png" width="400">
+
+部署操作可以在每次更新内容并push后再次进行，实现静态网站内容的按需实时更新。
+
+3.4 将OSS存储中的项目发布为网站链接
+
+3.4.1 解析自己的域名到OSS Bucket的访问域名上
+
+打开自己域名的DNS解析控制台，使用阿里云域名或其它提供商的域名均可，此处以阿里云为例：
+
+首先，找到自己要解析的域名，添加/修改一条解析记录：
+
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/cname.png" width="650">
+
+如下图所示，配置CNAME、自己的域名、记录值：
+
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/cname_2.png" width="400">
+
+记录值查看方法示意图：
+
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/oss_domain.png" width="600">
+
+完成配置后，稍等片刻，确定使用https://zijian.aliyun.com/ ，或者ping/dig/nslookup等指令可以查找到本域名的解析情况。
+
+3.4.2 当URL仅访问目录而非目录下的HTML文件时，由OSS托管路由自动定向至目录下的指定HTML文件
+
+某些前端项目生成的静态代码，其HTML中嵌入的链接地址是不含index.html的。这要求放置HTML文件的存储，或NGINX服务器等，有将裸访问路径自动对应到具体HTML文件的能力。
+
+OSS Bucket具有该托管能力，需要在使用的OSS Bucket内，选择「基础设置」「静态页面」，并如下图所示，填写默认首页为index.html，开通子目录首页功能，并点击「保存」。
+
+<img src="https://ecoboost-readme-image.oss-cn-shanghai.aliyuncs.com/feApp/github/hexo/oss_index.png" width="350">
+
+3.5 （可选）使用CDN加速域名访问，节约流量费用
+
+可点击「部署配置」中的「如何配置CDN加速」，将自己的域名与CDN加速绑定，从而加速网站访问。
